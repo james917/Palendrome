@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Palindrome Example</title>
+</head>
+<body>
+<h1>Palindrome Example</h1>
+<p>Please type in the input field to check if your word is a palindrome...</p>
+<hr/>
+<form id="form_pdrome">
+    <input type="text" id="test_input" />
+</form>
+
+
+
+<script type="text/javascript">
+
+	var isPalindrome = function (string) {
+    if (string == string.split('').reverse().join('')) {
+        alert(string + ' is palindrome.');
+    }
+    else {
+        alert(string + ' is not palindrome.');
+    }
+}
+
+document.getElementById('form_pdrome').onsubmit = function() {
+   isPalindrome(document.getElementById('test_input').value);
+    return false;
+}
+
+</script>
+</body>
+</html>
